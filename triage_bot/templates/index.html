@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Triage Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>AI-Powered Healthcare Triage Bot</h2>
+        <form method="post">
+            <label>Enter your symptoms:</label><br>
+            <textarea name="symptoms" rows="4" cols="50" required></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if result %}
+        <div class="result">
+            <h3>Recommendation: {{ result.recommendation }}</h3>
+            <p><b>Advice:</b> {{ result.advice }}</p>
+            <p><b>Possible Conditions:</b></p>
+            <ul>
+                {% for cond in result.conditions %}
+                <li>{{ cond }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
