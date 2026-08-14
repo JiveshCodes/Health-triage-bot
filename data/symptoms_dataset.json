@@ -1,0 +1,362 @@
+[
+  {
+    "symptoms": "neck pain stiffness around shoulders while moving head turning neck hurts cervical strain trapezius",
+    "urgency": "Self Care",
+    "esi_score": 4,
+    "body_region": "limbs",
+    "condition": "Cervical Muscle Strain / Neck & Shoulder Stiffness",
+    "specialist": "Physiotherapist / General Practitioner",
+    "red_flag": false,
+    "keywords": ["neck pain", "neck stiffness", "shoulder pain", "shoulder stiffness", "trapezius", "cervical strain", "neck hurts", "stiff neck shoulder"]
+  },
+  {
+    "symptoms": "crushing chest pain radiating left arm jaw sweating nausea heart attack cardiac emergency",
+    "urgency": "Emergency",
+    "esi_score": 1,
+    "body_region": "chest",
+    "condition": "Acute Coronary Syndrome / Myocardial Infarction",
+    "specialist": "Cardiologist",
+    "red_flag": true,
+    "keywords": ["crushing chest pain", "chest pain radiating arm", "heart attack symptoms", "chest pressure jaw", "cardiac arrest", "myocardial infarction"]
+  },
+  {
+    "symptoms": "sudden severe dyspnea haemoptysis coughing blood pleuritic pain hypoxia respiratory failure embolism",
+    "urgency": "Emergency",
+    "esi_score": 1,
+    "body_region": "chest",
+    "condition": "Pulmonary Embolism",
+    "specialist": "Pulmonologist",
+    "red_flag": true,
+    "keywords": ["coughing blood", "hemoptysis", "pulmonary embolism", "blood in sputum"]
+  },
+  {
+    "symptoms": "sudden face drooping facial asymmetry arm weakness slurred speech loss of vision stroke signs",
+    "urgency": "Emergency",
+    "esi_score": 1,
+    "body_region": "head",
+    "condition": "Acute Ischemic Stroke (FAST Warning)",
+    "specialist": "Neurologist",
+    "red_flag": true,
+    "keywords": ["face drooping", "arm weakness slurred speech", "stroke symptoms", "facial asymmetry sudden", "sudden vision loss stroke"]
+  },
+  {
+    "symptoms": "throat swelling tongue swelling lip swelling hives difficulty breathing severe allergy bee sting anaphylaxis",
+    "urgency": "Emergency",
+    "esi_score": 1,
+    "body_region": "systemic",
+    "condition": "Severe Anaphylactic Shock",
+    "specialist": "Emergency Medicine",
+    "red_flag": true,
+    "keywords": ["throat swelling", "tongue swelling", "lip swelling", "anaphylaxis", "severe allergic reaction breathing", "hives throat swelling"]
+  },
+  {
+    "symptoms": "sudden worst headache of life thunderclap meningismus nuchal rigidity photophobia neck stiff fever rash meningitis",
+    "urgency": "Emergency",
+    "esi_score": 1,
+    "body_region": "head",
+    "condition": "Bacterial Meningitis / Subarachnoid Haemorrhage",
+    "specialist": "Neurologist / Emergency Medicine",
+    "red_flag": true,
+    "keywords": ["thunderclap headache", "worst headache ever", "neck stiffness fever headache", "meningitis rash", "nuchal rigidity", "photophobia high fever headache"]
+  },
+  {
+    "symptoms": "diabetic ketoacidosis very high blood sugar fruity breath confusion rapid breathing dehydration dka emergency",
+    "urgency": "Emergency",
+    "esi_score": 1,
+    "body_region": "systemic",
+    "condition": "Diabetic Ketoacidosis (DKA)",
+    "specialist": "Endocrinologist / Emergency Medicine",
+    "red_flag": true,
+    "keywords": ["diabetic ketoacidosis", "dka symptoms", "fruity breath diabetes", "very high blood sugar emergency"]
+  },
+  {
+    "symptoms": "vomiting blood haematemesis black tarry stool bleeding stomach peptic ulcer gastrointestinal bleed",
+    "urgency": "Emergency",
+    "esi_score": 1,
+    "body_region": "abdomen",
+    "condition": "Gastrointestinal Haemorrhage / Peptic Ulcer Bleed",
+    "specialist": "Gastroenterologist / Emergency Medicine",
+    "red_flag": true,
+    "keywords": ["vomiting blood", "haematemesis", "black tarry stool", "blood in stool emergency", "gastrointestinal bleeding"]
+  },
+  {
+    "symptoms": "high fever productive cough shortness breath rusty sputum chills rigors chest infection pneumonia lung",
+    "urgency": "Urgent Care",
+    "esi_score": 2,
+    "body_region": "chest",
+    "condition": "Bacterial Pneumonia",
+    "specialist": "Pulmonologist / General Practitioner",
+    "red_flag": false,
+    "keywords": ["chest infection", "pneumonia symptoms", "productive cough fever", "rusty sputum", "fever chills cough", "high fever breathing difficulty"]
+  },
+  {
+    "symptoms": "high fever dry cough body aches fatigue sore throat loss of taste smell flu influenza covid viral",
+    "urgency": "Urgent Care",
+    "esi_score": 2,
+    "body_region": "systemic",
+    "condition": "Influenza / COVID-19 Viral Infection",
+    "specialist": "General Practitioner",
+    "red_flag": false,
+    "keywords": ["high fever cough", "flu symptoms", "body aches fever", "loss of taste smell", "influenza symptoms", "covid symptoms", "fever dry cough fatigue"]
+  },
+  {
+    "symptoms": "severe right lower quadrant pain rebound tenderness guarding nausea fever appendix appendicitis walking hurts",
+    "urgency": "Urgent Care",
+    "esi_score": 2,
+    "body_region": "abdomen",
+    "condition": "Acute Appendicitis",
+    "specialist": "General Surgeon",
+    "red_flag": true,
+    "keywords": ["right lower abdominal pain", "appendicitis", "right side abdominal pain fever", "lower right abdomen pain", "appendix pain nausea"]
+  },
+  {
+    "symptoms": "severe wheezing bronchospasm asthma attack shortness of breath chest tightness rescue inhaler not working",
+    "urgency": "Urgent Care",
+    "esi_score": 2,
+    "body_region": "chest",
+    "condition": "Acute Asthma Exacerbation",
+    "specialist": "Pulmonologist",
+    "red_flag": false,
+    "keywords": ["wheezing", "asthma attack", "asthma shortness of breath", "bronchospasm chest tightness", "inhaler not helping", "severe wheezing attack"]
+  },
+  {
+    "symptoms": "high fever flank pain costovertebral tenderness kidney infection blood in urine chills painful urination pyelonephritis",
+    "urgency": "Urgent Care",
+    "esi_score": 2,
+    "body_region": "abdomen",
+    "condition": "Pyelonephritis / Kidney Infection",
+    "specialist": "Urologist / Nephrologist",
+    "red_flag": false,
+    "keywords": ["kidney infection", "flank pain fever", "blood in urine fever", "painful urination high fever", "kidney pain chills fever"]
+  },
+  {
+    "symptoms": "throbbing one-sided headache light sensitivity sound sensitivity nausea visual aura zigzag migraine",
+    "urgency": "Routine Care",
+    "esi_score": 3,
+    "body_region": "head",
+    "condition": "Migraine Headache",
+    "specialist": "Neurologist",
+    "red_flag": false,
+    "keywords": ["throbbing headache one side", "migraine", "migraine with aura", "light sensitivity headache", "headache nausea vomiting", "visual aura headache", "one sided headache throbbing"]
+  },
+  {
+    "symptoms": "dull band pressure both sides forehead stress neck muscle tension headache behind eyes tension type",
+    "urgency": "Self Care",
+    "esi_score": 4,
+    "body_region": "head",
+    "condition": "Tension-Type Headache",
+    "specialist": "General Practitioner",
+    "red_flag": false,
+    "keywords": ["tension headache", "pressure headache both sides", "stress headache", "dull headache forehead", "band like headache", "headache both sides pressure"]
+  },
+  {
+    "symptoms": "mild headache runny nose sneezing sore throat nasal congestion common cold blocked nose no high fever",
+    "urgency": "Self Care",
+    "esi_score": 4,
+    "body_region": "head",
+    "condition": "Common Cold / Upper Respiratory Infection",
+    "specialist": "General Practitioner / Pharmacist",
+    "red_flag": false,
+    "keywords": ["runny nose", "common cold", "nasal congestion sneezing", "sneezing sore throat", "blocked nose cold", "cold symptoms mild", "mild sore throat cold"]
+  },
+  {
+    "symptoms": "room spinning dizziness vertigo balance problems nausea ear BPPV labyrinthitis lightheaded turning head",
+    "urgency": "Routine Care",
+    "esi_score": 3,
+    "body_region": "head",
+    "condition": "Benign Paroxysmal Positional Vertigo (BPPV) / Labyrinthitis",
+    "specialist": "ENT Specialist / Neurologist",
+    "red_flag": false,
+    "keywords": ["dizziness vertigo", "room spinning", "lightheaded balance", "bppv", "labyrinthitis", "dizzy when turning head", "balance problems dizzy"]
+  },
+  {
+    "symptoms": "burning urination frequent urge urinate cloudy urine mild suprapubic discomfort no fever uncomplicated UTI bladder",
+    "urgency": "Routine Care",
+    "esi_score": 3,
+    "body_region": "abdomen",
+    "condition": "Uncomplicated Urinary Tract Infection (UTI)",
+    "specialist": "General Practitioner / Urologist",
+    "red_flag": false,
+    "keywords": ["burning urination", "painful urination", "frequent urination urgent", "cloudy urine", "uti symptoms", "urinary tract infection", "bladder infection mild"]
+  },
+  {
+    "symptoms": "watery diarrhea cramps nausea vomiting gastroenteritis food poisoning stomach bug dehydrated loose stool",
+    "urgency": "Self Care",
+    "esi_score": 4,
+    "body_region": "abdomen",
+    "condition": "Acute Gastroenteritis / Food Poisoning",
+    "specialist": "General Practitioner",
+    "red_flag": false,
+    "keywords": ["diarrhea vomiting", "gastroenteritis", "food poisoning symptoms", "stomach cramps diarrhea", "loose stools nausea", "vomiting diarrhea stomach bug"]
+  },
+  {
+    "symptoms": "burning epigastric pain heartburn acid taste belching bloating worse lying after meals GERD acid reflux",
+    "urgency": "Routine Care",
+    "esi_score": 3,
+    "body_region": "abdomen",
+    "condition": "Gastroesophageal Reflux Disease (GERD) / Gastritis",
+    "specialist": "Gastroenterologist",
+    "red_flag": false,
+    "keywords": ["heartburn", "acid reflux symptoms", "gerd", "burning stomach after eating", "acid taste mouth", "chest burning after food", "stomach pain heartburn"]
+  },
+  {
+    "symptoms": "knee pain swelling stiffness sports injury meniscus ligament cartilage after exercise running",
+    "urgency": "Routine Care",
+    "esi_score": 3,
+    "body_region": "limbs",
+    "condition": "Knee Joint Injury / Meniscal or Ligament Strain",
+    "specialist": "Orthopedist / Sports Medicine",
+    "red_flag": false,
+    "keywords": ["knee pain", "knee swelling", "knee stiffness", "knee sports injury", "knee ache after exercise", "meniscus pain"]
+  },
+  {
+    "symptoms": "twisted ankle swollen ankle pain on weight bearing outer ankle bruise ligament sprain lateral",
+    "urgency": "Routine Care",
+    "esi_score": 3,
+    "body_region": "limbs",
+    "condition": "Ankle Sprain / Lateral Ligament Injury",
+    "specialist": "Orthopedist / Physical Therapist",
+    "red_flag": false,
+    "keywords": ["ankle sprain", "sprained ankle", "twisted ankle", "ankle pain swelling", "ankle bruise weight bearing", "outer ankle pain"]
+  },
+  {
+    "symptoms": "lower back pain lumbar spine aching stiffness worse bending prolonged standing sitting muscle strain posture",
+    "urgency": "Self Care",
+    "esi_score": 4,
+    "body_region": "back",
+    "condition": "Acute Lumbar Muscle Strain / Non-Specific Low Back Pain",
+    "specialist": "Physical Therapist / General Practitioner",
+    "red_flag": false,
+    "keywords": ["lower back pain", "lumbar pain", "back ache", "back muscle strain", "back stiffness bending", "lumbar muscle strain", "back pain after sitting"]
+  },
+  {
+    "symptoms": "shoulder pain aching restricted movement rotator cuff impingement lifting overhead frozen shoulder",
+    "urgency": "Routine Care",
+    "esi_score": 3,
+    "body_region": "limbs",
+    "condition": "Rotator Cuff Injury / Shoulder Impingement",
+    "specialist": "Orthopedist / Physiotherapist",
+    "red_flag": false,
+    "keywords": ["shoulder pain lifting", "rotator cuff", "shoulder impingement", "frozen shoulder", "shoulder ache overhead", "shoulder restricted movement"]
+  },
+  {
+    "symptoms": "itchy red skin rash dry patches contact dermatitis eczema localized irritation scaly",
+    "urgency": "Self Care",
+    "esi_score": 4,
+    "body_region": "skin",
+    "condition": "Contact Dermatitis / Mild Eczema",
+    "specialist": "Dermatologist",
+    "red_flag": false,
+    "keywords": ["skin rash itchy", "eczema symptoms", "contact dermatitis", "red skin patches dry", "itchy skin irritation", "dry itchy skin rash"]
+  },
+  {
+    "symptoms": "hives urticaria itchy welts skin allergic reaction mild no throat swelling food medication",
+    "urgency": "Routine Care",
+    "esi_score": 3,
+    "body_region": "skin",
+    "condition": "Mild Urticaria (Hives) / Allergic Skin Reaction",
+    "specialist": "Allergist / Dermatologist",
+    "red_flag": false,
+    "keywords": ["hives skin", "urticaria", "itchy welts skin", "skin allergy rash", "mild allergic skin reaction", "food allergy hives"]
+  },
+  {
+    "symptoms": "sneezing itchy watery eyes runny nose allergic rhinitis hayfever seasonal pollen dust mite allergy",
+    "urgency": "Self Care",
+    "esi_score": 4,
+    "body_region": "head",
+    "condition": "Allergic Rhinitis (Hay Fever)",
+    "specialist": "Allergist / General Practitioner",
+    "red_flag": false,
+    "keywords": ["sneezing itchy eyes", "watery eyes runny nose", "hay fever", "allergic rhinitis", "seasonal allergy nose", "pollen allergy sneezing"]
+  },
+  {
+    "symptoms": "red eye discharge crusting morning sticky eyelids conjunctivitis pink eye bacterial viral eye infection",
+    "urgency": "Routine Care",
+    "esi_score": 3,
+    "body_region": "head",
+    "condition": "Conjunctivitis (Pink Eye)",
+    "specialist": "Ophthalmologist / General Practitioner",
+    "red_flag": false,
+    "keywords": ["pink eye", "red eye conjunctivitis", "eye discharge crust", "crusting eyelids morning", "sticky eye infection", "conjunctivitis symptoms"]
+  },
+  {
+    "symptoms": "eye strain dry eyes screen fatigue blurred vision prolonged screen computer reading tired eyes",
+    "urgency": "Self Care",
+    "esi_score": 4,
+    "body_region": "head",
+    "condition": "Digital Eye Strain / Dry Eye Syndrome",
+    "specialist": "Ophthalmologist",
+    "red_flag": false,
+    "keywords": ["eye strain screen", "dry eyes computer", "screen fatigue eyes", "blurred vision after screen", "tired eyes reading", "digital eye strain"]
+  },
+  {
+    "symptoms": "sore throat difficulty swallowing swollen tonsils pus white patches strep pharyngitis tonsillitis infection",
+    "urgency": "Routine Care",
+    "esi_score": 3,
+    "body_region": "head",
+    "condition": "Pharyngitis / Tonsillitis (Strep Throat)",
+    "specialist": "ENT Specialist / General Practitioner",
+    "red_flag": false,
+    "keywords": ["sore throat", "throat pain swallowing", "swollen tonsils", "strep throat", "throat infection", "tonsillitis symptoms", "painful swallowing throat"]
+  },
+  {
+    "symptoms": "toothache dental pain jaw throbbing tooth abscess sensitivity hot cold gum swelling dental emergency",
+    "urgency": "Routine Care",
+    "esi_score": 3,
+    "body_region": "head",
+    "condition": "Dental Abscess / Toothache",
+    "specialist": "Dentist",
+    "red_flag": false,
+    "keywords": ["toothache", "tooth pain", "dental pain", "jaw pain tooth", "tooth abscess", "gum swelling tooth", "dental abscess"]
+  },
+  {
+    "symptoms": "general fatigue tiredness weakness lack of energy malaise chronic tiredness no specific symptom",
+    "urgency": "Self Care",
+    "esi_score": 4,
+    "body_region": "systemic",
+    "condition": "General Fatigue / Non-Specific Malaise",
+    "specialist": "General Practitioner",
+    "red_flag": false,
+    "keywords": ["general fatigue", "tiredness weakness", "lack of energy all day", "feeling weak tired", "chronic tiredness", "malaise no other symptoms"]
+  },
+  {
+    "symptoms": "wrist pain carpal tunnel tingling numbness fingers thumb typing repetitive strain RSI",
+    "urgency": "Routine Care",
+    "esi_score": 3,
+    "body_region": "limbs",
+    "condition": "Carpal Tunnel Syndrome / Wrist RSI",
+    "specialist": "Orthopedist / Neurologist",
+    "red_flag": false,
+    "keywords": ["wrist pain", "carpal tunnel", "finger tingling wrist", "hand numbness typing", "wrist numbness", "rsi wrist"]
+  },
+  {
+    "symptoms": "heart palpitations racing heart irregular heartbeat skipped beats flutter benign arrhythmia anxiety",
+    "urgency": "Routine Care",
+    "esi_score": 3,
+    "body_region": "chest",
+    "condition": "Cardiac Palpitations / Benign Arrhythmia",
+    "specialist": "Cardiologist",
+    "red_flag": false,
+    "keywords": ["heart palpitations", "racing heart", "irregular heartbeat", "skipped heartbeat", "heart fluttering", "fast heartbeat anxiety", "heart racing"]
+  },
+  {
+    "symptoms": "insomnia poor sleep unable to sleep waking up night restless sleep deprivation lying awake",
+    "urgency": "Self Care",
+    "esi_score": 4,
+    "body_region": "systemic",
+    "condition": "Insomnia / Sleep Disorder",
+    "specialist": "General Practitioner / Sleep Specialist",
+    "red_flag": false,
+    "keywords": ["insomnia", "poor sleep quality", "unable to sleep night", "waking up at night", "sleep difficulty", "restless sleep"]
+  },
+  {
+    "symptoms": "anxiety excessive worry stress panic attack rapid breathing nervous tension mental health disorder",
+    "urgency": "Routine Care",
+    "esi_score": 3,
+    "body_region": "systemic",
+    "condition": "Anxiety Disorder / Panic Attack",
+    "specialist": "Psychiatrist / Psychologist",
+    "red_flag": false,
+    "keywords": ["anxiety disorder", "panic attack symptoms", "excessive worry", "anxiety stress", "rapid breathing anxiety", "nervousness anxiety", "stress anxiety symptoms"]
+  }
+]
