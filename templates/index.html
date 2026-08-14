@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise AI Healthcare Triage Platform | Diagnostic AI</title>
+    <meta name="description" content="AI-Powered Clinical Triage Platform utilizing Hybrid ML models, vitals risk assessment, and anatomical symptom mapping.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <div class="brand">
+            <div class="brand-logo">⚕</div>
+            <div class="brand-text">
+                <h1>MediTriage AI</h1>
+                <span>Enterprise Clinical Decision Support</span>
+            </div>
+        </div>
+        <div class="nav-actions">
+            <button type="button" class="btn-secondary" onclick="window.print()">
+                🖨 Print / Export PDF
+            </button>
+            <button type="button" class="btn-secondary" id="btn-history" onclick="toggleHistoryModal()">
+                📋 History Log
+            </button>
+        </div>
+    </header>
+
+    <!-- Medical Safety Alert Banner -->
+    <div class="safety-banner">
+        <span><strong>⚠ MEDICAL DISCLAIMER:</strong> Triage Bot is an AI clinical decision demonstrator. In case of life-threatening emergencies, call emergency services immediately.</span>
+        <span>Hotline: <strong>911 / 112 / 102</strong></span>
+    </div>
+
+    <!-- Main Application Container -->
+    <main class="container">
+        <div class="grid-layout">
+            
+            <!-- Left Panel: Input Console & Multi-Modal Controls -->
+            <section class="card">
+                <div class="card-title">
+                    <span>Clinical Assessment Console</span>
+                    <span style="font-size:12px; color:var(--accent-cyan);">Hybrid ML v1.0</span>
+                </div>
+
+                <form method="POST" action="/" id="triage-form" enctype="multipart/form-data">
+                    <input type="hidden" name="body_region" id="input-body-region" value="">
+                    <input type="hidden" name="image_attached" id="input-image-attached" value="false">
+
+                    <!-- Interactive Anatomical Body Map -->
+                    <div class="form-group">
+                        <label>1. Select Anatomical Region (Optional)</label>
+                        <div class="body-map-container">
+                            <div class="body-svg-wrapper">
+                                <svg width="100" height="150" viewBox="0 0 100 150" id="svg-body-map">
+                                    <ellipse cx="50" cy="20" rx="14" ry="16" fill="#38bdf8" id="region-head" class="svg-part" cursor="pointer"/>
+                                    <rect x="36" y="38" width="28" height="40" rx="6" fill="#818cf8" id="region-chest" class="svg-part" cursor="pointer"/>
+                                    <rect x="36" y="80" width="28" height="25" rx="4" fill="#34d399" id="region-abdomen" class="svg-part" cursor="pointer"/>
+                                    <rect x="18" y="40" width="14" height="50" rx="5" fill="#f43f5e" id="region-limbs" class="svg-part" cursor="pointer"/>
+                                    <rect x="68" y="40" width="14" height="50" rx="5" fill="#f43f5e" id="region-limbs-2" class="svg-part" cursor="pointer"/>
+                                    <rect x="38" y="107" width="10" height="38" rx="4" fill="#fbbf24" id="region-legs" class="svg-part" cursor="pointer"/>
+                                    <rect x="52" y="107" width="10" height="38" rx="4" fill="#fbbf24" id="region-legs-2" class="svg-part" cursor="pointer"/>
+                                </svg>
+                            </div>
+                            <div class="body-region-pills">
+                                <span class="region-chip" onclick="selectRegion('head')">🧠 Head / Neck</span>
+                                <span class="region-chip" onclick="selectRegion('chest')">🫀 Chest / Heart</span>
+                                <span class="region-chip" onclick="selectRegion('abdomen')">🩺 Abdomen</span>
+                                <span class="region-chip" onclick="selectRegion('limbs')">🦴 Limbs / Joints</span>
+                                <span class="region-chip" onclick="selectRegion('skin')">🧴 Skin / Surface</span>
+                                <span class="region-chip" onclick="selectRegion('systemic')">🌐 Systemic / Body</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Free Text Input with Speech Mic -->
+                    <div class="form-group">
+                        <label for="symptoms">2. Describe Patient Symptoms & Duration</label>
+                        <div class="input-with-mic">
+                            <textarea name="symptoms" id="symptoms" placeholder="e.g. Sharp chest pain radiating to left arm with shortness of breath..." required>{{ symptoms_input }}</textarea>
+                            <button type="button" class="mic-btn" id="btn-mic" title="Voice Speech-to-Text Input" onclick="toggleSpeechRecognition()">🎤</button>
+                        </div>
+                        
+                        <!-- Quick Symptom Pills -->
+                        <div class="symptom-chips">
+                            <span class="symptom-chip" onclick="appendSymptom('Chest pain radiating to left arm')">🚨 Chest Pain</span>
+                            <span class="symptom-chip" onclick="appendSymptom('High fever with dry cough and fatigue')">🤒 High Fever + Cough</span>
+                            <span class="symptom-chip" onclick="appendSymptom('Shortness of breath and wheezing')">🫁 Shortness of Breath</span>
+                            <span class="symptom-chip" onclick="appendSymptom('Throbbing headache with light sensitivity')">🤯 Migraine Headache</span>
+                            <span class="symptom-chip" onclick="appendSymptom('Severe right lower stomach pain')">⚡ Abdominal Pain</span>
+                            <span class="symptom-chip" onclick="appendSymptom('Red itchy skin rash with swelling')">🧴 Skin Rash</span>
+                        </div>
+                    </div>
+
+                    <!-- Multi-Modal Image Uploader -->
+                    <div class="form-group">
+                        <label>3. Attach Visual Reference Photo (Optional)</label>
+                        <div class="upload-dropzone" onclick="document.getElementById('file-image').click()">
+                            <p id="upload-label">📷 Drag & Drop or Click to Upload Symptom Photo (Rash, Eye, Wound)</p>
+                            <input type="file" id="file-image" accept="image/*" style="display:none;" onchange="handleImageUpload(event)">
+                            <div class="upload-preview" id="image-preview-container" style="display:none;">
+                                <img id="image-preview-thumb" src="" alt="Thumbnail" class="upload-thumbnail">
+                                <div style="text-align:left; font-size:12px;">
+                                    <strong id="image-filename">photo.jpg</strong><br>
+                                    <span style="color:var(--accent-teal);">Visual Reference Loaded</span>
+                                </div>
+                                <button type="button" style="margin-left:auto; background:none; border:none; color:var(--color-red); cursor:pointer;" onclick="removeImageUpload(event)">✕</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vitals & Risk Adjusters -->
+                    <div class="form-group">
+                        <label>4. Patient Vitals & Risk Factors (Optional)</label>
+                        <div class="vitals-grid">
+                            <div>
+                                <label style="font-size:11px;">Age (Years)</label>
+                                <input type="number" name="age" placeholder="e.g. 45" class="input-number" min="0" max="120">
+                            </div>
+                            <div>
+                                <label style="font-size:11px;">Temp (°F)</label>
+                                <input type="number" step="0.1" name="temperature" placeholder="e.g. 101.4" class="input-number">
+                            </div>
+                            <div>
+                                <label style="font-size:11px;">SpO2 (%)</label>
+                                <input type="number" name="spo2" placeholder="e.g. 98" class="input-number" min="50" max="100">
+                            </div>
+                        </div>
+
+                        <div class="comorbidity-checkboxes">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="heart_disease" value="1"> Heart Disease
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="diabetes" value="1"> Diabetes
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary" id="btn-submit">
+                        ⚡ Analyze Symptoms & Run ML Triage
+                    </button>
+                </form>
+            </section>
+
+            <!-- Right Panel: Clinical Assessment Results Dashboard -->
+            <section class="card">
+                <div class="card-title">
+                    <span>Clinical Diagnostic Dashboard</span>
+                    <span style="font-size:12px; color:var(--text-muted);">Real-Time Output</span>
+                </div>
+
+                {% if result %}
+                <!-- Urgency Level Header Badge -->
+                <div class="result-header-badge {{ result.urgency_code }}">
+                    <div>
+                        <span class="badge-tag {{ result.urgency_code }}">ESI Level {{ result.esi_score }}</span>
+                        <h2 style="margin-top:8px; font-size:22px;">{{ result.primary_recommendation }}</h2>
+                    </div>
+                    {% if result.esi_score <= 2 %}
+                    <a href="tel:911" class="btn-primary" style="width:auto; padding:10px 16px; background:var(--color-red);">
+                        📞 Call {{ result.emergency_contact }}
+                    </a>
+                    {% endif %}
+                </div>
+
+                <!-- Model Confidence Gauge -->
+                <div class="gauge-meter-wrapper">
+                    <div class="confidence-ring">{{ result.confidence_score }}%</div>
+                    <div>
+                        <h4 style="font-size:14px; color:#fff;">ML Diagnostic Confidence</h4>
+                        <p style="font-size:12px; color:var(--text-muted);">Model: {{ result.model_type }}</p>
+                        {% if result.safety_override %}
+                        <span style="font-size:11px; color:var(--color-red); font-weight:700;">⚠ Red-Flag Emergency Guardrail Override Applied</span>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Differential Diagnosis Progress Bars -->
+                <div class="diag-list">
+                    <h3 style="font-size:14px; margin-bottom:12px; color:var(--text-heading);">Differential Diagnosis Probabilities</h3>
+                    {% for item in result.differential_diagnosis %}
+                    <div class="diag-item">
+                        <div class="diag-header">
+                            <span>{{ item.condition }} <small style="color:var(--text-muted);">({{ item.specialist }})</small></span>
+                            <span>{{ item.probability }}%</span>
+                        </div>
+                        <div class="progress-bg">
+                            <div class="progress-fill" style="width: {{ item.probability }}%;"></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Visual Assessment & Risk Factor Notes -->
+                {% if result.visual_assessment_notes %}
+                <div style="background:rgba(6, 182, 212, 0.1); border-left:3px solid var(--accent-cyan); padding:12px; border-radius:6px; margin-bottom:16px; font-size:13px;">
+                    <strong>📷 Visual Reference Assessment:</strong> {{ result.visual_assessment_notes }}
+                </div>
+                {% endif %}
+
+                {% if result.risk_factors_triggered %}
+                <div style="background:rgba(234, 179, 8, 0.1); border-left:3px solid var(--color-yellow); padding:12px; border-radius:6px; margin-bottom:16px; font-size:13px;">
+                    <strong>⚠ Patient Risk Factors Triggered:</strong>
+                    <ul style="margin-left:18px; margin-top:4px;">
+                        {% for rf in result.risk_factors_triggered %}
+                        <li>{{ rf }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+
+                <!-- Action Plan Checklist -->
+                <div style="margin-top:20px;">
+                    <h4 style="font-size:14px; color:var(--text-heading);">Clinical Action Plan</h4>
+                    <ul class="action-checklist">
+                        {% for step in result.action_plan %}
+                        <li>{{ step }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                {% else %}
+                <!-- Empty Placeholder State -->
+                <div style="text-align:center; padding:60px 20px; color:var(--text-muted);">
+                    <div style="font-size:48px; margin-bottom:16px;">🩺</div>
+                    <h3>Ready for Clinical Assessment</h3>
+                    <p style="font-size:13px; margin-top:8px; max-width:360px; margin-left:auto; margin-right:auto;">
+                        Select an anatomical region, speak or type your symptoms, or upload a reference image on the left console to generate a complete ML diagnosis report.
+                    </p>
+                </div>
+                {% endif %}
+            </section>
+        </div>
+    </main>
+
+    <!-- History Drawer Modal -->
+    <div id="history-modal" style="display:none; fixed:top; position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:1000; justify-content:center; align-items:center;">
+        <div class="card" style="width:500px; max-width:90%; max-height:80vh; overflow-y:auto;">
+            <div class="card-title">
+                <span>Assessment History Log</span>
+                <button type="button" style="background:none; border:none; color:#fff; cursor:pointer;" onclick="toggleHistoryModal()">✕</button>
+            </div>
+            <div id="history-items-container" style="font-size:13px;">
+                <p style="color:var(--text-muted);">No saved triage sessions in local storage.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Client-Side JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
