@@ -1,0 +1,337 @@
+{
+  "dataset": [
+    {
+      "symptoms": "crushing chest pain radiating to left arm shortness of breath cold sweats nausea",
+      "urgency": "Emergency",
+      "esi_score": 1,
+      "body_region": "chest",
+      "condition": "Acute Coronary Syndrome / Myocardial Infarction",
+      "specialist": "Cardiologist",
+      "red_flag": true,
+      "keywords": [
+        "chest pain",
+        "arm pain",
+        "shortness of breath",
+        "sweats"
+      ]
+    },
+    {
+      "symptoms": "sudden severe dyspnea chest tightness difficulty catching breath coughing blood",
+      "urgency": "Emergency",
+      "esi_score": 1,
+      "body_region": "chest",
+      "condition": "Pulmonary Embolism",
+      "specialist": "Pulmonologist",
+      "red_flag": true,
+      "keywords": [
+        "shortness of breath",
+        "chest tightness",
+        "coughing blood"
+      ]
+    },
+    {
+      "symptoms": "sudden face drooping arm weakness slurred speech confusion loss of vision",
+      "urgency": "Emergency",
+      "esi_score": 1,
+      "body_region": "head",
+      "condition": "Acute Ischemic Stroke (FAST Warning)",
+      "specialist": "Neurologist",
+      "red_flag": true,
+      "keywords": [
+        "face drooping",
+        "arm weakness",
+        "slurred speech",
+        "confusion"
+      ]
+    },
+    {
+      "symptoms": "severe anaphylaxis swelling of lips tongue throat hives difficulty breathing after bee sting",
+      "urgency": "Emergency",
+      "esi_score": 1,
+      "body_region": "systemic",
+      "condition": "Severe Anaphylactic Shock",
+      "specialist": "Allergist / Emergency Medicine",
+      "red_flag": true,
+      "keywords": [
+        "swelling lips",
+        "hives",
+        "difficulty breathing",
+        "allergic reaction"
+      ]
+    },
+    {
+      "symptoms": "sudden thunderclap headache severe stiff neck high fever confusion vomiting",
+      "urgency": "Emergency",
+      "esi_score": 1,
+      "body_region": "head",
+      "condition": "Bacterial Meningitis / Subarachnoid Hemorrhage",
+      "specialist": "Neurologist",
+      "red_flag": true,
+      "keywords": [
+        "thunderclap headache",
+        "stiff neck",
+        "high fever"
+      ]
+    },
+    {
+      "symptoms": "high fever persistent dry cough body aches fatigue sore throat loss of taste",
+      "urgency": "Urgent Care",
+      "esi_score": 2,
+      "body_region": "systemic",
+      "condition": "Influenza or COVID-19 Infection",
+      "specialist": "General Practitioner",
+      "red_flag": false,
+      "keywords": [
+        "fever",
+        "cough",
+        "body aches",
+        "fatigue",
+        "sore throat"
+      ]
+    },
+    {
+      "symptoms": "severe sharp right lower abdominal pain nausea fever tenderness walking hurts",
+      "urgency": "Urgent Care",
+      "esi_score": 2,
+      "body_region": "abdomen",
+      "condition": "Acute Appendicitis",
+      "specialist": "General Surgeon",
+      "red_flag": true,
+      "keywords": [
+        "abdominal pain",
+        "nausea",
+        "fever",
+        "right lower pain"
+      ]
+    },
+    {
+      "symptoms": "wheezing shortness of breath chest tightness nighttime coughing asthma attack triggers",
+      "urgency": "Urgent Care",
+      "esi_score": 2,
+      "body_region": "chest",
+      "condition": "Acute Asthma Exacerbation",
+      "specialist": "Pulmonologist",
+      "red_flag": false,
+      "keywords": [
+        "wheezing",
+        "shortness of breath",
+        "chest tightness",
+        "asthma"
+      ]
+    },
+    {
+      "symptoms": "high fever painful urination back kidney pain chills cloud blood in urine",
+      "urgency": "Urgent Care",
+      "esi_score": 2,
+      "body_region": "abdomen",
+      "condition": "Pyelonephritis / Severe Urinary Tract Infection",
+      "specialist": "Urologist / Nephrologist",
+      "red_flag": false,
+      "keywords": [
+        "fever",
+        "painful urination",
+        "back pain",
+        "blood in urine"
+      ]
+    },
+    {
+      "symptoms": "throbbing headache sensitivity to light and sound aura nausea one-sided head pain",
+      "urgency": "Routine Care",
+      "esi_score": 3,
+      "body_region": "head",
+      "condition": "Migraine Headache",
+      "specialist": "Neurologist",
+      "red_flag": false,
+      "keywords": [
+        "throbbing headache",
+        "light sensitivity",
+        "nausea",
+        "aura"
+      ]
+    },
+    {
+      "symptoms": "dull band-like pressure across forehead neck muscle tension mild headache stress",
+      "urgency": "Self Care",
+      "esi_score": 4,
+      "body_region": "head",
+      "condition": "Tension-Type Headache",
+      "specialist": "General Practitioner",
+      "red_flag": false,
+      "keywords": [
+        "headache",
+        "pressure forehead",
+        "neck tension",
+        "stress"
+      ]
+    },
+    {
+      "symptoms": "sneezing itchy watery eyes runny nose nasal congestion seasonal allergies",
+      "urgency": "Self Care",
+      "esi_score": 4,
+      "body_region": "head",
+      "condition": "Allergic Rhinitis (Hay Fever)",
+      "specialist": "Allergist",
+      "red_flag": false,
+      "keywords": [
+        "sneezing",
+        "itchy eyes",
+        "runny nose",
+        "congestion"
+      ]
+    },
+    {
+      "symptoms": "red itchy skin rash localized swelling hives mild redness irritation contact eczema",
+      "urgency": "Self Care",
+      "esi_score": 4,
+      "body_region": "skin",
+      "condition": "Contact Dermatitis / Mild Eczema",
+      "specialist": "Dermatologist",
+      "red_flag": false,
+      "keywords": [
+        "skin rash",
+        "swelling",
+        "hives",
+        "redness",
+        "itchy"
+      ]
+    },
+    {
+      "symptoms": "burning stomach pain heartburn acid reflux worse after eating belching nausea",
+      "urgency": "Routine Care",
+      "esi_score": 3,
+      "body_region": "abdomen",
+      "condition": "Gastroesophageal Reflux Disease (GERD) / Gastritis",
+      "specialist": "Gastroenterologist",
+      "red_flag": false,
+      "keywords": [
+        "stomach pain",
+        "heartburn",
+        "acid reflux",
+        "belching"
+      ]
+    },
+    {
+      "symptoms": "sprained ankle swelling pain bearing weight bruise joint soreness ligament strain",
+      "urgency": "Routine Care",
+      "esi_score": 3,
+      "body_region": "limbs",
+      "condition": "Ankle Sprain / Ligament Strain",
+      "specialist": "Orthopedist / Physical Therapist",
+      "red_flag": false,
+      "keywords": [
+        "sprained ankle",
+        "swelling",
+        "joint pain",
+        "bruise"
+      ]
+    },
+    {
+      "symptoms": "red eye discharge crusting eyelids irritation morning stickiness pink eye",
+      "urgency": "Routine Care",
+      "esi_score": 3,
+      "body_region": "head",
+      "condition": "Viral / Bacterial Conjunctivitis (Pink Eye)",
+      "specialist": "Ophthalmologist",
+      "red_flag": false,
+      "keywords": [
+        "red eye",
+        "discharge",
+        "crusting eyelids",
+        "pink eye"
+      ]
+    },
+    {
+      "symptoms": "scratchy sore throat difficulty swallowing low fever swollen neck lymph nodes",
+      "urgency": "Routine Care",
+      "esi_score": 3,
+      "body_region": "head",
+      "condition": "Pharyngitis / Tonsillitis",
+      "specialist": "ENT Specialist",
+      "red_flag": false,
+      "keywords": [
+        "sore throat",
+        "swallowing pain",
+        "fever",
+        "swollen nodes"
+      ]
+    },
+    {
+      "symptoms": "lower back pain muscle spasm aching stiffness worse with movement no numbness",
+      "urgency": "Self Care",
+      "esi_score": 4,
+      "body_region": "back",
+      "condition": "Acute Lumbar Muscle Strain",
+      "specialist": "Physiatrist / Chiropractor",
+      "red_flag": false,
+      "keywords": [
+        "back pain",
+        "muscle spasm",
+        "stiffness",
+        "aching"
+      ]
+    }
+  ],
+  "vocabulary": [
+    "aching",
+    "back pain",
+    "difficulty breathing",
+    "headache",
+    "hives",
+    "asthma",
+    "light sensitivity",
+    "stiffness",
+    "neck tension",
+    "sweats",
+    "throbbing headache",
+    "stress",
+    "high fever",
+    "thunderclap headache",
+    "arm pain",
+    "sore throat",
+    "swollen nodes",
+    "swelling",
+    "stomach pain",
+    "coughing blood",
+    "redness",
+    "body aches",
+    "heartburn",
+    "stiff neck",
+    "allergic reaction",
+    "blood in urine",
+    "acid reflux",
+    "arm weakness",
+    "crusting eyelids",
+    "pink eye",
+    "runny nose",
+    "sneezing",
+    "right lower pain",
+    "painful urination",
+    "shortness of breath",
+    "pressure forehead",
+    "discharge",
+    "sprained ankle",
+    "muscle spasm",
+    "wheezing",
+    "red eye",
+    "itchy",
+    "slurred speech",
+    "skin rash",
+    "nausea",
+    "cough",
+    "belching",
+    "fever",
+    "chest pain",
+    "aura",
+    "swelling lips",
+    "abdominal pain",
+    "fatigue",
+    "congestion",
+    "joint pain",
+    "bruise",
+    "itchy eyes",
+    "chest tightness",
+    "swallowing pain",
+    "confusion",
+    "face drooping"
+  ]
+}
