@@ -4,6 +4,16 @@
 
 ---
 
+## 📸 User Interface & Clinical Dashboard
+
+### 1. Main Diagnostic Dashboard & Multi-Modal Console
+![MediTriage AI Main Dashboard](docs/screenshots/dashboard_preview.png)
+
+### 2. Clinical Assessment History Log
+![MediTriage AI Assessment History Log](docs/screenshots/history_log.png)
+
+---
+
 ## 🌟 Key Features
 
 1. **Hybrid AI & Clinical Safety Engine**:

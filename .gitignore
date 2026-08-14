@@ -43,6 +43,7 @@ desktop.ini
 *.png
 *.gif
 WhatsApp*
+!docs/screenshots/*
 
 # Logs
 *.log
